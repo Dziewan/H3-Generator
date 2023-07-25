@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public enum Building {
+public enum Fraction {
     CASTLE(2),
     BASTION(4),
     TOWER(9),
@@ -18,7 +18,7 @@ public enum Building {
 
     private final Integer priority;
 
-    Building(Integer priority) {
+    Fraction(Integer priority) {
         this.priority = priority;
     }
 
@@ -26,7 +26,7 @@ public enum Building {
         return priority;
     }
 
-    public static List<Building> toList() {
+    public static List<Fraction> toList() {
         return new ArrayList<>(Arrays.stream(values()).toList());
     }
 }

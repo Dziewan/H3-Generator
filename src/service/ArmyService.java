@@ -4,113 +4,113 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import static model.enumeration.Building.BASTION;
-import static model.enumeration.Building.CASTLE;
-import static model.enumeration.Building.CONFLUX;
-import static model.enumeration.Building.COVE;
-import static model.enumeration.Building.DUNGEON;
-import static model.enumeration.Building.FORTRESS;
-import static model.enumeration.Building.INFERNO;
-import static model.enumeration.Building.NECROPOLIS;
-import static model.enumeration.Building.STRONGHOLD;
-import static model.enumeration.Building.TOWER;
-import static model.enumeration.Champion.AERIS;
-import static model.enumeration.Champion.AJIT;
-import static model.enumeration.Champion.ALAMAR;
-import static model.enumeration.Champion.ALKIN;
-import static model.enumeration.Champion.ANABEL;
-import static model.enumeration.Champion.ARLACH;
-import static model.enumeration.Champion.AYDEN;
-import static model.enumeration.Champion.BRISSA;
-import static model.enumeration.Champion.BROGHILD;
-import static model.enumeration.Champion.BRON;
-import static model.enumeration.Champion.CALH;
-import static model.enumeration.Champion.CASSIO;
-import static model.enumeration.Champion.CHARNA;
-import static model.enumeration.Champion.CLANCY;
-import static model.enumeration.Champion.CLAVIUS;
-import static model.enumeration.Champion.CORKES;
-import static model.enumeration.Champion.CRAG_HACK;
-import static model.enumeration.Champion.DACE;
-import static model.enumeration.Champion.DEEMER;
-import static model.enumeration.Champion.DESSA;
-import static model.enumeration.Champion.DRAKON;
-import static model.enumeration.Champion.EDAMON;
-import static model.enumeration.Champion.EDRIC;
-import static model.enumeration.Champion.ELLESHAR;
-import static model.enumeration.Champion.ELMORE;
-import static model.enumeration.Champion.EOVACIUS;
-import static model.enumeration.Champion.FAFNER;
-import static model.enumeration.Champion.FIONA;
-import static model.enumeration.Champion.FIUR;
-import static model.enumeration.Champion.GISELLE;
-import static model.enumeration.Champion.GRETCHIN;
-import static model.enumeration.Champion.GRWULF;
-import static model.enumeration.Champion.GUNDULLA;
-import static model.enumeration.Champion.GUNNAR;
-import static model.enumeration.Champion.GURNISSON;
-import static model.enumeration.Champion.IGNATIUS;
-import static model.enumeration.Champion.IGNISSA;
-import static model.enumeration.Champion.ILLOR;
-import static model.enumeration.Champion.IONA;
-import static model.enumeration.Champion.ISRA;
-import static model.enumeration.Champion.IVOR;
-import static model.enumeration.Champion.JABARKAS;
-import static model.enumeration.Champion.JAEGAR;
-import static model.enumeration.Champion.JEDDITE;
-import static model.enumeration.Champion.JENOVA;
-import static model.enumeration.Champion.JEREMY;
-import static model.enumeration.Champion.JOSEPHINE;
-import static model.enumeration.Champion.KALT;
-import static model.enumeration.Champion.KORBAC;
-import static model.enumeration.Champion.KRELLION;
-import static model.enumeration.Champion.KYRRE;
-import static model.enumeration.Champion.LACUS;
-import static model.enumeration.Champion.LORELEI;
-import static model.enumeration.Champion.LUNA;
-import static model.enumeration.Champion.LYONIS;
-import static model.enumeration.Champion.MALEKITH;
-import static model.enumeration.Champion.MARIUS;
-import static model.enumeration.Champion.MEPHALA;
-import static model.enumeration.Champion.MIRIAM;
-import static model.enumeration.Champion.MOANDOR;
-import static model.enumeration.Champion.MONERE;
-import static model.enumeration.Champion.NAGASH;
-import static model.enumeration.Champion.NEELA;
-import static model.enumeration.Champion.NYMUS;
-import static model.enumeration.Champion.ORIN;
-import static model.enumeration.Champion.PASIS;
-import static model.enumeration.Champion.PIQUE;
-import static model.enumeration.Champion.PYRE;
-import static model.enumeration.Champion.RANLOO;
-import static model.enumeration.Champion.RISSA;
-import static model.enumeration.Champion.ROSIC;
-import static model.enumeration.Champion.SANDRO;
-import static model.enumeration.Champion.SHAKTI;
-import static model.enumeration.Champion.SHIVA;
-import static model.enumeration.Champion.SOLMYR;
-import static model.enumeration.Champion.SORSHA;
-import static model.enumeration.Champion.SPINT;
-import static model.enumeration.Champion.STRAKER;
-import static model.enumeration.Champion.SYLVIA;
-import static model.enumeration.Champion.TAMIKA;
-import static model.enumeration.Champion.TAZAR;
-import static model.enumeration.Champion.THANT;
-import static model.enumeration.Champion.THUNAR;
-import static model.enumeration.Champion.TYRAXOR;
-import static model.enumeration.Champion.TYRIS;
-import static model.enumeration.Champion.VALESKA;
-import static model.enumeration.Champion.VIDOMINA;
-import static model.enumeration.Champion.VOKIAL;
-import static model.enumeration.Champion.VOY;
-import static model.enumeration.Champion.WYSTAN;
-import static model.enumeration.Champion.YOG;
-import static model.enumeration.Champion.ZYDAR;
-import model.enumeration.Building;
-import model.enumeration.Champion;
+import static model.enumeration.Fraction.BASTION;
+import static model.enumeration.Fraction.CASTLE;
+import static model.enumeration.Fraction.CONFLUX;
+import static model.enumeration.Fraction.COVE;
+import static model.enumeration.Fraction.DUNGEON;
+import static model.enumeration.Fraction.FORTRESS;
+import static model.enumeration.Fraction.INFERNO;
+import static model.enumeration.Fraction.NECROPOLIS;
+import static model.enumeration.Fraction.STRONGHOLD;
+import static model.enumeration.Fraction.TOWER;
+import static model.enumeration.Hero.AERIS;
+import static model.enumeration.Hero.AJIT;
+import static model.enumeration.Hero.ALAMAR;
+import static model.enumeration.Hero.ALKIN;
+import static model.enumeration.Hero.ANABEL;
+import static model.enumeration.Hero.ARLACH;
+import static model.enumeration.Hero.AYDEN;
+import static model.enumeration.Hero.BRISSA;
+import static model.enumeration.Hero.BROGHILD;
+import static model.enumeration.Hero.BRON;
+import static model.enumeration.Hero.CALH;
+import static model.enumeration.Hero.CASSIO;
+import static model.enumeration.Hero.CHARNA;
+import static model.enumeration.Hero.CLANCY;
+import static model.enumeration.Hero.CLAVIUS;
+import static model.enumeration.Hero.CORKES;
+import static model.enumeration.Hero.CRAG_HACK;
+import static model.enumeration.Hero.DACE;
+import static model.enumeration.Hero.DEEMER;
+import static model.enumeration.Hero.DESSA;
+import static model.enumeration.Hero.DRAKON;
+import static model.enumeration.Hero.EDAMON;
+import static model.enumeration.Hero.EDRIC;
+import static model.enumeration.Hero.ELLESHAR;
+import static model.enumeration.Hero.ELMORE;
+import static model.enumeration.Hero.EOVACIUS;
+import static model.enumeration.Hero.FAFNER;
+import static model.enumeration.Hero.FIONA;
+import static model.enumeration.Hero.FIUR;
+import static model.enumeration.Hero.GISELLE;
+import static model.enumeration.Hero.GRETCHIN;
+import static model.enumeration.Hero.GRWULF;
+import static model.enumeration.Hero.GUNDULLA;
+import static model.enumeration.Hero.GUNNAR;
+import static model.enumeration.Hero.GURNISSON;
+import static model.enumeration.Hero.IGNATIUS;
+import static model.enumeration.Hero.IGNISSA;
+import static model.enumeration.Hero.ILLOR;
+import static model.enumeration.Hero.IONA;
+import static model.enumeration.Hero.ISRA;
+import static model.enumeration.Hero.IVOR;
+import static model.enumeration.Hero.JABARKAS;
+import static model.enumeration.Hero.JAEGAR;
+import static model.enumeration.Hero.JEDDITE;
+import static model.enumeration.Hero.JENOVA;
+import static model.enumeration.Hero.JEREMY;
+import static model.enumeration.Hero.JOSEPHINE;
+import static model.enumeration.Hero.KALT;
+import static model.enumeration.Hero.KORBAC;
+import static model.enumeration.Hero.KRELLION;
+import static model.enumeration.Hero.KYRRE;
+import static model.enumeration.Hero.LACUS;
+import static model.enumeration.Hero.LORELEI;
+import static model.enumeration.Hero.LUNA;
+import static model.enumeration.Hero.LYONIS;
+import static model.enumeration.Hero.MALEKITH;
+import static model.enumeration.Hero.MARIUS;
+import static model.enumeration.Hero.MEPHALA;
+import static model.enumeration.Hero.MIRIAM;
+import static model.enumeration.Hero.MOANDOR;
+import static model.enumeration.Hero.MONERE;
+import static model.enumeration.Hero.NAGASH;
+import static model.enumeration.Hero.NEELA;
+import static model.enumeration.Hero.NYMUS;
+import static model.enumeration.Hero.ORIN;
+import static model.enumeration.Hero.PASIS;
+import static model.enumeration.Hero.PIQUE;
+import static model.enumeration.Hero.PYRE;
+import static model.enumeration.Hero.RANLOO;
+import static model.enumeration.Hero.RISSA;
+import static model.enumeration.Hero.ROSIC;
+import static model.enumeration.Hero.SANDRO;
+import static model.enumeration.Hero.SHAKTI;
+import static model.enumeration.Hero.SHIVA;
+import static model.enumeration.Hero.SOLMYR;
+import static model.enumeration.Hero.SORSHA;
+import static model.enumeration.Hero.SPINT;
+import static model.enumeration.Hero.STRAKER;
+import static model.enumeration.Hero.SYLVIA;
+import static model.enumeration.Hero.TAMIKA;
+import static model.enumeration.Hero.TAZAR;
+import static model.enumeration.Hero.THANT;
+import static model.enumeration.Hero.THUNAR;
+import static model.enumeration.Hero.TYRAXOR;
+import static model.enumeration.Hero.TYRIS;
+import static model.enumeration.Hero.VALESKA;
+import static model.enumeration.Hero.VIDOMINA;
+import static model.enumeration.Hero.VOKIAL;
+import static model.enumeration.Hero.VOY;
+import static model.enumeration.Hero.WYSTAN;
+import static model.enumeration.Hero.YOG;
+import static model.enumeration.Hero.ZYDAR;
+import model.enumeration.Fraction;
+import model.enumeration.Hero;
 
 public class ArmyService {
-    private static final Map<Building, List<Champion>> HEROES = Map.of(
+    private static final Map<Fraction, List<Hero>> HEROES = Map.of(
         CASTLE, List.of(ORIN, VALESKA, EDRIC, SYLVIA, SORSHA, TYRIS, LYONIS),
         BASTION, List.of(MEPHALA, JENOVA, GISELLE, IVOR, CLANCY, KYRRE, ELLESHAR, AERIS),
         TOWER, List.of(PIQUE, JOSEPHINE, NEELA, FAFNER, RISSA, IONA, SOLMYR),
@@ -129,21 +129,21 @@ public class ArmyService {
         this.random = new Random();
     }
 
-    public Champion rollHero(Champion bannedHero) {
-        List<Champion> heroes = new ArrayList<>(findByChampion(bannedHero));
+    public Hero rollHero(Hero bannedHero) {
+        List<Hero> heroes = new ArrayList<>(findByChampion(bannedHero));
         heroes.remove(bannedHero);
         return rollHero(heroes);
     }
 
-    public Champion rollHero(Building building) {
-        return rollHero(HEROES.get(building));
+    public Hero rollHero(Fraction fraction) {
+        return rollHero(HEROES.get(fraction));
     }
 
-    private Champion rollHero(List<Champion> heroes) {
+    private Hero rollHero(List<Hero> heroes) {
         return heroes.get(random.nextInt(heroes.size()));
     }
 
-    private List<Champion> findByChampion(Champion hero) {
+    private List<Hero> findByChampion(Hero hero) {
         return HEROES.values()
             .stream()
             .filter(champions -> champions

@@ -1,6 +1,6 @@
 package model.enumeration;
 
-public enum Champion {
+public enum Hero {
 
     //CASTLE
     ORIN,

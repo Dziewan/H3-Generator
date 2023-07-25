@@ -1,7 +1,7 @@
 package model;
 
-import model.enumeration.Building;
-import model.enumeration.Champion;
+import model.enumeration.Fraction;
+import model.enumeration.Hero;
 
-public record Army(Building building, Champion champion) {
+public record Army(Fraction fraction, Hero hero) {
 }

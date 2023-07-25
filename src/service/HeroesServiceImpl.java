@@ -7,8 +7,8 @@ import model.Army;
 import model.Daniel;
 import model.Match;
 import model.Michal;
-import model.enumeration.Building;
-import model.enumeration.Champion;
+import model.enumeration.Fraction;
+import model.enumeration.Hero;
 import model.enumeration.Color;
 import model.enumeration.ResetOrder;
 
@@ -23,35 +23,37 @@ public class HeroesServiceImpl implements HeroesService {
 
     @Override
     public void generateMatch() {
-        List<Building> firstPlayerBuildings = Building.toList();
-        List<Building> secondPlayerBuildings = Building.toList();
+        List<Fraction> firstPlayerFractions = Fraction.toList();
+        List<Fraction> secondPlayerFractions = Fraction.toList();
 
         Random random = new Random();
-        List<Building> firstPlayerResult = new LinkedList<>();
-        List<Building> secondPlayerResult = new LinkedList<>();
+        List<Fraction> firstPlayerResult = new LinkedList<>();
+        List<Fraction> secondPlayerResult = new LinkedList<>();
 
-        for (int i = 0; i < Building.values().length; i++) {
-            int firstPlayerIndex = random.nextInt(firstPlayerBuildings.size());
-            Building firstPlayerBuilding = firstPlayerBuildings.get(firstPlayerIndex);
-            firstPlayerResult.add(firstPlayerBuilding);
-            firstPlayerBuildings.remove(firstPlayerBuilding);
+        //Generates 10 fractions in two lists respectively. No mirror ones
+        for (int i = 0; i < Fraction.values().length; i++) {
+            int firstPlayerIndex = random.nextInt(firstPlayerFractions.size());
+            Fraction firstPlayerFraction = firstPlayerFractions.get(firstPlayerIndex);
+            firstPlayerResult.add(firstPlayerFraction);
+            firstPlayerFractions.remove(firstPlayerFraction);
             while (true) {
-                int secondPlayerIndex = random.nextInt(secondPlayerBuildings.size());
-                Building secondPlayerBuilding = secondPlayerBuildings.get(secondPlayerIndex);
-                if (secondPlayerBuilding != firstPlayerBuilding) {
-                    secondPlayerResult.add(secondPlayerBuilding);
-                    secondPlayerBuildings.remove(secondPlayerBuilding);
+                int secondPlayerIndex = random.nextInt(secondPlayerFractions.size());
+                Fraction secondPlayerFraction = secondPlayerFractions.get(secondPlayerIndex);
+                if (secondPlayerFraction != firstPlayerFraction) {
+                    secondPlayerResult.add(secondPlayerFraction);
+                    secondPlayerFractions.remove(secondPlayerFraction);
                     break;
                 }
             }
         }
 
-        for (int i = 0; i < Building.values().length; i++) {
-            Building michalBuilding = firstPlayerResult.get(i);
-            Building danielBuilding = secondPlayerResult.get(i);
+        //Generates army, hero, color and reset order for each list of fractions and prints the results
+        for (int i = 0; i < Fraction.values().length; i++) {
+            Fraction michalFraction = firstPlayerResult.get(i);
+            Fraction danielFraction = secondPlayerResult.get(i);
 
-            Army michalArmy = new Army(michalBuilding, armyService.rollHero(michalBuilding));
-            Army danielArmy = new Army(danielBuilding, armyService.rollHero(danielBuilding));
+            Army michalArmy = new Army(michalFraction, armyService.rollHero(michalFraction));
+            Army danielArmy = new Army(danielFraction, armyService.rollHero(danielFraction));
 
             Color michalColor = rollColor();
             Color danielColor = michalColor.getOpposite();
@@ -69,15 +71,15 @@ public class HeroesServiceImpl implements HeroesService {
     }
 
     @Override
-    public void reRollChampion(Champion bannedChampion) {
-        Champion michal = armyService.rollHero(bannedChampion);
+    public void reRollChampion(Hero bannedHero) {
+        Hero michal = armyService.rollHero(bannedHero);
         System.out.println(michal);
     }
 
     @Override
-    public void reRollChampions(Champion michalBannedChampion, Champion danielBannedChampion) {
-        Champion michal = armyService.rollHero(michalBannedChampion);
-        Champion daniel = armyService.rollHero(danielBannedChampion);
+    public void reRollChampions(Hero michalBannedHero, Hero danielBannedHero) {
+        Hero michal = armyService.rollHero(michalBannedHero);
+        Hero daniel = armyService.rollHero(danielBannedHero);
         System.out.println("Michal: " + michal);
         System.out.println("Daniel: " + daniel);
     }
