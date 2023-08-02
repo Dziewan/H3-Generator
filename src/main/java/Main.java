@@ -1,14 +1,14 @@
+import factory.HeroesServiceFactory;
 import model.*;
 import model.enumeration.Hero;
 import service.HeroesService;
-import service.HeroesServiceImpl;
 
 import java.util.List;
 
 import static model.enumeration.Hero.*;
 
 public class Main {
-    private static final HeroesService HEROES_SERVICE = new HeroesServiceImpl();
+    private static final HeroesService HEROES_SERVICE = HeroesServiceFactory.newInstance();
     private static final String STATS = "Daniel - 2 : 1 - Michal";
 
     public static void main(String[] args) {
