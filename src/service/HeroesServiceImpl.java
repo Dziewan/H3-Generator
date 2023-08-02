@@ -1,12 +1,8 @@
 package service;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
-import model.Army;
-import model.Daniel;
-import model.Match;
-import model.Michal;
+import java.util.*;
+
+import model.*;
 import model.enumeration.Fraction;
 import model.enumeration.Hero;
 import model.enumeration.Color;
@@ -22,7 +18,8 @@ public class HeroesServiceImpl implements HeroesService {
     }
 
     @Override
-    public void generateMatch() {
+    public List<Match> generateMatches() {
+        List<Match> matches = new ArrayList<>();
         List<Fraction> firstPlayerFractions = Fraction.toList();
         List<Fraction> secondPlayerFractions = Fraction.toList();
 
@@ -64,24 +61,28 @@ public class HeroesServiceImpl implements HeroesService {
             Michal michal = new Michal(michalArmy, michalColor, michalResetOrder);
             Daniel daniel = new Daniel(danielArmy, danielColor, danielResetOrder);
 
-            Match match = new Match(michal, daniel);
-            System.out.println(match);
-            System.out.println();
+            matches.add(new Match(michal, daniel));
         }
+
+        return matches;
     }
 
     @Override
-    public void reRollChampion(Hero bannedHero) {
-        Hero michal = armyService.rollHero(bannedHero);
-        System.out.println(michal);
+    public Hero reRollChampion(Hero bannedHero) {
+        return armyService.rollHero(bannedHero);
     }
 
     @Override
-    public void reRollChampions(Hero michalBannedHero, Hero danielBannedHero) {
+    public HeroPair reRollChampions(Hero michalBannedHero, Hero danielBannedHero) {
         Hero michal = armyService.rollHero(michalBannedHero);
         Hero daniel = armyService.rollHero(danielBannedHero);
-        System.out.println("Michal: " + michal);
-        System.out.println("Daniel: " + daniel);
+
+        return new HeroPair(michal, daniel);
+    }
+
+    @Override
+    public HeroDetails getHeroDetails(Hero hero) {
+        return new HeroDetails(hero, hero.getSpec(), hero.getPrimarySkillset(), hero.getSecondarySkillSet());
     }
 
     private Color rollColor() {

@@ -1,0 +1,33 @@
+package model.enumeration;
+
+public enum Skill {
+    AIR_MAGIC,
+    ARCHERY,
+    ARMORER,
+    ARTILLERY,
+    BALLISTICS,
+    DIPLOMACY,
+    EAGLE_EYE,
+    EARTH_MAGIC,
+    ESTATES,
+    FIRE_MAGIC,
+    FIRST_AID,
+    INTELLIGENCE,
+    LEADERSHIP,
+    LEARNING,
+    LOGISTICS,
+    LUCK,
+    MYSTICISM,
+    NAVIGATION,
+    NECROMANCY,
+    OFFENCE,
+    PATHFINDING,
+    INTERFERENCE,
+    SCHOLAR,
+    SCOUTING,
+    SORCERY,
+    TACTICS,
+    WATER_MAGIC,
+    WISDOM,
+    EMPTY
+}

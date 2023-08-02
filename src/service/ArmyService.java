@@ -35,7 +35,7 @@ import static model.enumeration.Hero.DACE;
 import static model.enumeration.Hero.DEEMER;
 import static model.enumeration.Hero.DESSA;
 import static model.enumeration.Hero.DRAKON;
-import static model.enumeration.Hero.EDAMON;
+import static model.enumeration.Hero.ERDAMON;
 import static model.enumeration.Hero.EDRIC;
 import static model.enumeration.Hero.ELLESHAR;
 import static model.enumeration.Hero.ELMORE;
@@ -45,7 +45,7 @@ import static model.enumeration.Hero.FIONA;
 import static model.enumeration.Hero.FIUR;
 import static model.enumeration.Hero.GISELLE;
 import static model.enumeration.Hero.GRETCHIN;
-import static model.enumeration.Hero.GRWULF;
+import static model.enumeration.Hero.GERWULF;
 import static model.enumeration.Hero.GUNDULLA;
 import static model.enumeration.Hero.GUNNAR;
 import static model.enumeration.Hero.GURNISSON;
@@ -118,8 +118,8 @@ public class ArmyService {
         NECROPOLIS, List.of(STRAKER, RANLOO, VOKIAL, MOANDOR, CHARNA, TAMIKA, ISRA, VIDOMINA, CLAVIUS, SANDRO, THANT, NAGASH),
         DUNGEON, List.of(LORELEI, ARLACH, DACE, AJIT, GUNNAR, SHAKTI, ALAMAR, JAEGAR, MALEKITH, JEDDITE, DEEMER),
         STRONGHOLD, List.of(YOG, GURNISSON, JABARKAS, SHIVA, GRETCHIN, KRELLION, CRAG_HACK, TYRAXOR, DESSA, GUNDULLA),
-        FORTRESS, List.of(BRON, DRAKON, WYSTAN, TAZAR, ALKIN, KORBAC, GRWULF, BROGHILD, ROSIC, VOY),
-        CONFLUX, List.of(PASIS, THUNAR, IGNISSA, LACUS, MONERE, EDAMON, FIUR, KALT, LUNA, BRISSA),
+        FORTRESS, List.of(BRON, DRAKON, WYSTAN, TAZAR, ALKIN, KORBAC, GERWULF, BROGHILD, ROSIC, VOY),
+        CONFLUX, List.of(PASIS, THUNAR, IGNISSA, LACUS, MONERE, ERDAMON, FIUR, KALT, LUNA, BRISSA),
         COVE, List.of(CORKES, JEREMY, ILLOR, ELMORE, ANABEL, CASSIO, MIRIAM, EOVACIUS, SPINT)
     );
 
