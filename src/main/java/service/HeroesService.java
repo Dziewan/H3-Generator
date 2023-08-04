@@ -1,7 +1,7 @@
 package service;
 
 import model.*;
-import model.enumeration.Hero;
+import model.enumeration.*;
 
 import java.util.List;
 
@@ -37,4 +37,14 @@ public interface HeroesService {
      * @param hero Hero which system gets details for
      */
     HeroDetails getHeroDetails(Hero hero);
+
+    /**
+     * Returns list of available heroes
+     */
+    List<Hero> getHeroes();
+
+    /**
+     * Returns list of available hero's skills
+     */
+    List<Skill> getSkills();
 }

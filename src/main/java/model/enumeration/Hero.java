@@ -157,7 +157,7 @@ public enum Hero {
 
     @Override
     public String toString() {
-        return String.format("Hero=[%s]\nSpec=[%s]\nPrimary Skill=[%s %s]\nSecondary Skill=[%s %s]",
+        return String.format("Hero=[%s]\nSpec=[%s]\nPrimary Skill=[%s %s]\nSecondary Skill=[%s %s]\n",
             this.name(),
             this.spec,
             this.primarySkillset.skill(),

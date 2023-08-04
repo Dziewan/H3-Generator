@@ -12,7 +12,7 @@ public class Main {
     private static final String STATS = "Daniel - 2:1 - Michal";
 
     public static void main(String[] args) {
-        getHeroDetails(LACUS);
+        reRollChampions(TYRAXOR, ZYDAR);
     }
 
     private static void generateMatches() {
@@ -27,7 +27,8 @@ public class Main {
 
     private static void reRollChampions(Hero michalBannedChampion, Hero danielBannedChampion) {
         HeroPair heroPair = HEROES_SERVICE.reRollChampions(michalBannedChampion, danielBannedChampion);
-        System.out.println(heroPair);
+        System.out.println(heroPair.michalHero());
+        System.out.println(heroPair.danielHero());
     }
 
     private static void getHeroDetails(Hero hero) {

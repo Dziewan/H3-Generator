@@ -96,6 +96,16 @@ public class HeroesServiceFactory {
             return new HeroDetails(hero, hero.getSpec(), hero.getPrimarySkillset(), hero.getSecondarySkillSet());
         }
 
+        @Override
+        public List<Hero> getHeroes() {
+            return Arrays.stream(Hero.values()).toList();
+        }
+
+        @Override
+        public List<Skill> getSkills() {
+            return Arrays.stream(Skill.values()).toList();
+        }
+
         private Color rollColor() {
             return roll() ? Color.RED : Color.BLUE;
         }
