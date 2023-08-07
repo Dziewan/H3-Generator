@@ -98,12 +98,16 @@ public class HeroesServiceFactory {
 
         @Override
         public List<Hero> getHeroes() {
-            return Arrays.stream(Hero.values()).toList();
+            return Arrays.stream(Hero.values())
+                .sorted(Comparator.comparing(Hero::name))
+                .toList();
         }
 
         @Override
         public List<Skill> getSkills() {
-            return Arrays.stream(Skill.values()).toList();
+            return Arrays.stream(Skill.values())
+                .sorted(Comparator.comparing(Skill::name))
+                .toList();
         }
 
         private Color rollColor() {
