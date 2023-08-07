@@ -9,6 +9,14 @@ public class Match {
         this.secondPlayer = secondPlayer;
     }
 
+    public Player getFirstPlayer() {
+        return firstPlayer;
+    }
+
+    public Player getSecondPlayer() {
+        return secondPlayer;
+    }
+
     @Override
     public String toString() {
         return String.format("%s vs %s\n%s (%s) vs %s (%s)\n%s : %s\n%s : %s\n",
