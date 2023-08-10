@@ -6,7 +6,7 @@
 
     <groupId>groupId</groupId>
     <artifactId>h3generator</artifactId>
-    <version>2.3-SNAPSHOT</version>
+    <version>2.4-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
